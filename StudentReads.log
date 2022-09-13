@@ -1,0 +1,36 @@
+2021-12-09 12:18:44,648:INFO:Home page route request
+2021-12-09 12:18:44,649:DEBUG:User already logged in
+2021-12-09 12:18:44,650:INFO:127.0.0.1 - - [09/Dec/2021 12:18:44] "[32mGET / HTTP/1.1[0m" 302 -
+2021-12-09 12:18:44,660:INFO:Dashboard page route request
+2021-12-09 12:18:44,986:INFO:127.0.0.1 - - [09/Dec/2021 12:18:44] "GET /Dashboard HTTP/1.1" 200 -
+2021-12-09 12:18:45,037:INFO:127.0.0.1 - - [09/Dec/2021 12:18:45] "GET /static/style.css HTTP/1.1" 200 -
+2021-12-09 12:18:45,037:INFO:127.0.0.1 - - [09/Dec/2021 12:18:45] "GET /static/Notes.js HTTP/1.1" 200 -
+2021-12-09 12:18:45,207:INFO:127.0.0.1 - - [09/Dec/2021 12:18:45] "GET /static/back.jpg HTTP/1.1" 200 -
+2021-12-09 12:18:45,322:INFO:127.0.0.1 - - [09/Dec/2021 12:18:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-12-09 12:18:50,129:INFO:Logout route request
+2021-12-09 12:18:50,129:DEBUG:User logout successful
+2021-12-09 12:18:50,131:INFO:127.0.0.1 - - [09/Dec/2021 12:18:50] "[32mGET /Logout/ HTTP/1.1[0m" 302 -
+2021-12-09 12:18:50,137:INFO:Home page route request
+2021-12-09 12:18:50,137:DEBUG:User not logged in
+2021-12-09 12:18:50,151:INFO:127.0.0.1 - - [09/Dec/2021 12:18:50] "GET / HTTP/1.1" 200 -
+2021-12-09 12:18:50,180:INFO:127.0.0.1 - - [09/Dec/2021 12:18:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2021-12-09 12:18:50,180:INFO:127.0.0.1 - - [09/Dec/2021 12:18:50] "GET /static/Book1.jpg HTTP/1.1" 200 -
+2021-12-09 12:18:50,192:INFO:127.0.0.1 - - [09/Dec/2021 12:18:50] "GET /static/Book2.jpg HTTP/1.1" 200 -
+2021-12-09 12:18:50,193:INFO:127.0.0.1 - - [09/Dec/2021 12:18:50] "GET /static/Book3.jpg HTTP/1.1" 200 -
+2021-12-09 12:18:50,194:INFO:127.0.0.1 - - [09/Dec/2021 12:18:50] "GET /static/HomeJS.js HTTP/1.1" 200 -
+2021-12-09 12:18:51,673:INFO:Home page route request
+2021-12-09 12:18:51,674:DEBUG:User not logged in
+2021-12-09 12:18:51,675:INFO:127.0.0.1 - - [09/Dec/2021 12:18:51] "GET / HTTP/1.1" 200 -
+2021-12-09 12:18:51,714:INFO:127.0.0.1 - - [09/Dec/2021 12:18:51] "[36mGET /static/Book1.jpg HTTP/1.1[0m" 304 -
+2021-12-09 12:18:51,718:INFO:127.0.0.1 - - [09/Dec/2021 12:18:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2021-12-09 12:18:51,720:INFO:127.0.0.1 - - [09/Dec/2021 12:18:51] "[36mGET /static/Book2.jpg HTTP/1.1[0m" 304 -
+2021-12-09 12:18:51,720:INFO:127.0.0.1 - - [09/Dec/2021 12:18:51] "[36mGET /static/HomeJS.js HTTP/1.1[0m" 304 -
+2021-12-09 12:18:51,723:INFO:127.0.0.1 - - [09/Dec/2021 12:18:51] "[36mGET /static/Book3.jpg HTTP/1.1[0m" 304 -
+2021-12-09 12:18:52,400:INFO:Login page route request
+2021-12-09 12:18:52,417:INFO:127.0.0.1 - - [09/Dec/2021 12:18:52] "GET /Login HTTP/1.1" 200 -
+2021-12-09 12:18:52,446:INFO:127.0.0.1 - - [09/Dec/2021 12:18:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2021-12-09 12:18:52,448:INFO:127.0.0.1 - - [09/Dec/2021 12:18:52] "[36mGET /static/HomeJS.js HTTP/1.1[0m" 304 -
+2021-12-09 12:18:53,287:INFO:Register page route request
+2021-12-09 12:18:53,321:INFO:127.0.0.1 - - [09/Dec/2021 12:18:53] "GET /Register HTTP/1.1" 200 -
+2021-12-09 12:18:53,347:INFO:127.0.0.1 - - [09/Dec/2021 12:18:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2021-12-09 12:18:53,349:INFO:127.0.0.1 - - [09/Dec/2021 12:18:53] "[36mGET /static/HomeJS.js HTTP/1.1[0m" 304 -
