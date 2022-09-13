@@ -1,0 +1,91 @@
+<!--
+This is the Register page.
+The purpose of this page is to allow the user
+to register an account.
+-->
+
+{% extends "base.html" %}
+{% block content %}
+  <title>StudentReads</title>
+  {{Register.description}}
+
+  <div class="background-image">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="container" id="container">
+      <div class="form-container container1">
+        <form class="register-form" method="post" name="register">
+          <h1 id="TitleH1">Register</h1>
+          <p>Please enter your details to Register.</p>
+          {{ form.hidden_tag() }}
+          <p id="form2_p">Username:</p>
+          {{ form.username(class_='form-control', type="text", placeholder="username") }}
+          {% for error in form.username.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          {{ form.hidden_tag() }}
+          <p id="form2_p">Password:</p>
+          {{ form.password(class_='form-control', type="password", placeholder="password") }}
+          {% for error in form.password.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          {{ form.hidden_tag() }}
+          <p id="form2_p">First Name:</p>
+          {{ form.first_name(class_='form-control', type="text", placeholder="first name") }}
+          {% for error in form.first_name.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          {{ form.hidden_tag() }}
+          <p id="form2_p">Last Name:</p>
+          {{ form.last_name(class_='form-control', type="text", placeholder="last name") }}
+          {% for error in form.last_name.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          {{ form.hidden_tag() }}
+          <p id="form2_p">Contact Number:</p>
+          {{ form.number(class_='form-control', type="tel", placeholder="07456 678234") }}
+          {% for error in form.number.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          {{ form.hidden_tag() }}
+          <p id="form2_p">Email:</p>
+          {{ form.email(class_='form-control', type="email", placeholder="example@gmail.com") }}
+          {% for error in form.email.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          <button type="submit">Register</button>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-right">
+            <p>Welcome to the StudentReads Register area. Please regster to access the features.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

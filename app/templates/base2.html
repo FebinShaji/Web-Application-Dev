@@ -1,0 +1,59 @@
+<!--
+This is the base.html page.
+The purpose of this html file is to provide a standard layout for the dashboard page,
+reading list page, add books page, read books page, reviews page, add reviews page,
+notes page and logout. It provides a general navigation bar that all the other
+pages make use of. As well as the error messages.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="/Dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="/ReadingList">Reading List</a></li>
+          <li class="nav-item"><a class="nav-link" href="/AddBook">Add Books</a></li>
+          <li class="nav-item"><a class="nav-link" href="/ReadList">Read Books</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Review">Review Books</a></li>
+          <li class="nav-item"><a class="nav-link" href="/AddReview">Add Review</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Notes">Notes</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Logout/">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+          <div class="msg">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-success">
+                     {{ message }}
+                </div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/Notes.js"></script>
+  </body>
+</html>

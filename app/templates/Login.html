@@ -1,0 +1,55 @@
+<!--
+This is the Login page.
+The purpose of this page is to allow
+the user to login to their account.
+-->
+
+{% extends "base.html" %}
+{% block content %}
+  <title>StudentReads</title>
+  {{Login.description}}
+
+  <div class="background-image">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="container" id="container">
+      <div class="form-container container1">
+        <form class="login-form" method="post" name="login">
+          <h1 id="TitleH1">Login</h1>
+          <p>Please enter your credentials to Login.</p>
+          {{ form.hidden_tag() }}
+          <p id="form_p">Username:</p>
+          {{ form.username(class_='form-control', type="text", placeholder="username") }}
+          {% for error in form.username.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          {{ form.hidden_tag() }}
+          <p id="form_p">Password:</p>
+          {{ form.password(class_='form-control', type="password", placeholder="password") }}
+          {% for error in form.password.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          <button type="submit">LOGIN</button>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-right">
+            <p>Welcome to the StudentReads user area. Please login to access the features.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

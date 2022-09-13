@@ -1,0 +1,22 @@
+<!--
+This is the Notes page.
+The purpose of this page is to allow the user to make
+some generic notes.
+-->
+
+{% extends "base2.html" %}
+{% block content %}
+  <title>StudentReads</title>
+  {{Notes.description}}
+
+  <div class="background-image">
+    <div class="jumbotron">
+      <h1>Notes:</h1>
+      <p>Please enter any notes you wish to take:</p>
+    </div>
+    <textarea id="Textbox" class="textbox"></textarea>
+    <button id="NotesButton" onclick="mySave()">Save</button>
+    <button onclick="myLoad()">Load</button>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+<!--
+This is the Home page.
+The purpose of this page is to clearly display to the
+user details about the website and soem images
+in the form of a slideshow.
+-->
+
+{% extends "base.html" %}
+{% block content %}
+  <title>StudentReads</title>
+  {{Home.description}}
+
+  <div class="background-image">
+    <div class="jumbotron">
+      <h1>StudentReads</h1>
+      <p>Welcome to StudentReads, your online reading tool.</p>
+      <p>StudentReads is an online reading tool for those who are interested in reading.
+      It offers users the ability to create an online list of books that you would like to read,
+      allows you to mark off books that you have finished reading and write reviews for books you have
+      finished reading.</p>
+      <p>Login to access these features.</p>
+    </div>
+
+    <div class="slideshow">
+        <div class="slideshow_pics">
+            <div class="pictures active">
+               <img src="/static/Book1.jpg"/>
+            </div>
+            <div class="pictures">
+               <img src="/static/Book2.jpg"/>
+            </div>
+            <div class="pictures">
+               <img src="/static/Book3.jpg"/>
+            </div>
+        </div>
+            <div class="left_arrow"><</div>
+            <div class="right_arrow">></div>
+     </div>
+    <br>
+  </div>
+
+{% endblock %}

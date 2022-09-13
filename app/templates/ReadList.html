@@ -1,0 +1,23 @@
+<!--
+This is the Read Books List page.
+The purpose of this page is to clearly display to the
+user all of books they have finished reading. It shows the
+name and author.
+-->
+
+{% extends "base2.html" %}
+{% block content %}
+  <title>StudentReads</title>
+  {{ReadList.description}}
+
+  <div class="book">
+    <h6 id="BookH">Your Read Books List:</h6>
+    <br>
+    {% for data in book %}
+      <p id="Books_name">Book Name: {{ data.name }}</p>
+      <p id="Books_details">Author: {{ data.author }}</p>
+      <hr>
+    {% endfor %}
+  </div>
+
+{% endblock %}

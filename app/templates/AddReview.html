@@ -1,0 +1,73 @@
+<!--
+This is the Add Review page.
+The purpose of this page is to allow the user
+to add their reviews to the website.
+-->
+
+{% extends "base2.html" %}
+{% block content %}
+  <title>StudentReads</title>
+  {{AddReview.description}}
+
+  <div class="background-image">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="container" id="container">
+      <div class="form-container container1">
+        <form class="review-form" method="post" name="add_review">
+          <h1>Add Reviews</h1>
+          <p>Please enter your book review.</p>
+          {{ form.hidden_tag() }}
+          <p id="form_p">Title:</p>
+          {{ form.title(class_='form-control', type="text", placeholder="post title") }}
+          {% for error in form.title.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          {{ form.hidden_tag() }}
+          <p id="form_p">Book name:</p>
+          {{ form.book_name(class_='form-control', type="text", placeholder="book title") }}
+          {% for error in form.book_name.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          {{ form.hidden_tag() }}
+          <p id="form_p">Author:</p>
+          {{ form.author(class_='form-control', type="text", placeholder="author name") }}
+          {% for error in form.author.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          {{ form.hidden_tag() }}
+          <p id="form_p">Description:</p>
+          {{ form.description(class_='form-control', placeholder="description", rows="5") }}
+          {% for error in form.description.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          <button type="submit">Add Review</button>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-right">
+            <p>In order to add your review on a book, please fill in the boxes on the left.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

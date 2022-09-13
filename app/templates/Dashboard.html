@@ -1,0 +1,69 @@
+<!--
+This is the Dashboard page.
+The purpose of this page is to clearly display to the
+user their details and allows the user to change their password.
+-->
+
+{% extends "base2.html" %}
+{% block content %}
+  <title>StudentReads</title>
+  {{Dashboard.description}}
+
+  <div class="background-image">
+
+    <div class="jumbotron">
+      <h1>Your Dashboard</h1>
+      <p>Hello, welcome back {{ assessment.first_name }}</p>
+      <p>Your StudentReads account will let you access your reading list, books you have already read,
+      write reviews on books and write quick notes.</p>
+    </div>
+
+    <div class="container" id="container">
+      <div class="form-container container1">
+        <form class="password-form" method="post" name="password_change">
+          <h1>Change Password</h1>
+          <p>Please enter your new password</p>
+          {{ form.hidden_tag() }}
+          <p id="form_p">Password:</p>
+          {{ form.password_change1(class_='form-control', type="password", placeholder="new password") }}
+          {% for error in form.password_change1.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          {{ form.hidden_tag() }}
+          <p id="form_p">Confirm Password:</p>
+          {{ form.password_change2(class_='form-control', type="password", placeholder="confirm password") }}
+          {% for error in form.password_change2.errors %}
+          <div class="alert alert-danger w-100" role="alert">
+            [{{ error }}]
+          </div>
+          {% endfor %}
+
+          <button type="submit">Change Password</button>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-right">
+              <br>
+              <br>
+              <p>Listed below are the details for your account.</p>
+              <p>Username: {{ assessment.username }}</p>
+              <p>First Name: {{ assessment.first_name }}</p>
+              <p>Last Name: {{ assessment.last_name }}</p>
+              <p>Contact Number: {{ assessment.number }}</p>
+              <p>Email: {{ assessment.email }}</p>
+              <br/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <br>
+  </div>
+
+{% endblock %}

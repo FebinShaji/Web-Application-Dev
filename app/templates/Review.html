@@ -1,0 +1,27 @@
+<!--
+This is the Review page.
+The purpose of this page is to clearly display to the
+user all of reviews that have been made on the website.
+It shows the title of the review, details on the book and
+the user who submitted the review.
+-->
+
+{% extends "base2.html" %}
+{% block content %}
+  <title>StudentReads</title>
+  {{Review.description}}
+
+  <div class="book">
+    <h6 id="BookH">Book Reviews:</h6>
+    <br>
+    {% for data in reviews %}
+      <p id="Books_name">{{ data.title }}</p>
+      <p id="Books_details">Book Name: {{ data.book_name }}</p>
+      <p id="Books_details">By: {{ data.account_rev.first_name }}</p>
+      <p id="Books_details">Author: {{ data.author }}</p>
+      <p id="Books_details">Description: {{ data.description }}</p>
+      <hr>
+    {% endfor %}
+  </div>
+
+{% endblock %}

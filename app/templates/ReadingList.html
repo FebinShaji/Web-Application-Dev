@@ -1,0 +1,24 @@
+<!--
+This is the Reading List page.
+The purpose of this page is to clearly display to the
+user all of books in their reading list. It shows the
+name and author and allows the user to mark them as read.
+-->
+
+{% extends "base2.html" %}
+{% block content %}
+  <title>StudentReads</title>
+  {{ReadingList.description}}
+
+  <div class="book">
+    <h6 id="BookH">Your Reading List:</h6>
+    <br>
+    {% for data in book %}
+      <p id="Books_name">Book Name: {{ data.name }}</p>
+      <p id="Books_details">Author: {{ data.author }}</p>
+      <a id="Books_button" href="/ReadingList/{{data.id}}" class="btn btn-danger btn-sm">Mark as Read</a>
+      <hr>
+    {% endfor %}
+  </div>
+
+{% endblock %}
