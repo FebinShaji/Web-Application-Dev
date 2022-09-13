@@ -1,0 +1,251 @@
+body{
+  background-image: linear-gradient(to right, #233329, #63d471);
+}
+h2 {
+  font-size: 36px;
+  text-decoration: underline;
+  text-underline-position: below;
+  font-family: "Times New Roman", Times,serif;
+}
+
+h4  {
+  font-size: 26px;
+  text-decoration: underline;
+  text-underline-position: below;
+}
+
+h6  {
+  font-size: 14px;
+}
+
+h5  {
+  font-size: 20px
+}
+
+hr  {
+  width: 98%;
+  margin-left: 1%;
+  border: 2px solid white;
+
+}
+
+.msg  {
+  width: 100%;
+  padding: 10px;
+}
+.form1  {
+  padding-left: 700px;
+  padding-right: 700px;
+}
+.title1  {
+  text-align: center;
+}
+.row  {
+  display: flex;
+}
+.column {
+  flex: 15%;
+  padding: 5px;
+
+}
+
+
+.slideshow{
+max-width: 700px;
+margin:20px auto;
+position: relative;
+overflow: hidden;
+}
+.slideshow .left_arrow,.slideshow .right_arrow{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #464646;
+  border-radius: 50%;
+  color:#ffffff;
+  font-size: 20px;
+  top:50%;
+  cursor: pointer;
+  margin-top: -20px;
+  text-align: center;
+  line-height: 36px;
+}
+.slideshow .left_arrow{
+left: 30px;
+}
+.slideshow .right_arrow{
+right: 30px;
+}
+.slideshow .slideshow_pics .pictures img{
+max-width: 100%;
+display: block;
+animation:zoom 1s ease;
+}
+@keyframes zoom{
+100%{transform: scale(1);opacity:1}
+}
+.slideshow .slideshow_pics .pictures{
+display: none;
+position: relative;
+}
+.slideshow .slideshow_pics .pictures.active{
+display: block;
+}
+
+.background-image {
+  background-image: url("/static/back.jpg");
+  height: 100%;
+  width: 98.82%;
+  background-size: cover;
+  position: absolute;
+}
+
+.jumbotron  {
+  text-align: center;
+  background: linear-gradient(to right, #a71d31, #3f0d12);
+  padding: 5px;
+  color: white;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 30px;
+}
+
+
+button {
+	border-radius: 20px;
+	border: 1px solid #2a2a72;
+  background: linear-gradient(to right, #009ffd, #2a2a72);
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 12px 45px;
+  margin: 15px;
+}
+form {
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+}
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+}
+.container1 {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+}
+.overlay {
+	background: #FF416C;
+	background: linear-gradient(to right, #009ffd, #2a2a72);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+}
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+}
+.overlay-right {
+	right: 0;
+}
+
+
+.notes {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+.textbox {
+  float: left;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  min-height: 500px;
+  border: 1px solid grey;
+}
+#NotesButton  {
+  margin-top: 1%;
+  margin-left: 20%;
+}
+
+#form2_p {
+  font-size: 10px;
+  margin-bottom: 0px;
+}
+
+#TitleH1  {
+  font-size: 30px;
+}
+
+#form_p  {
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+
+
+.book {
+  background-color: black;
+  opacity: 0.8;
+}
+#BookH  {
+  text-decoration: underline;
+  text-decoration-color: white;
+  margin-left: 20px;
+  font-size: 40px;
+  color: white;
+}
+#Books_name {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 20px;
+  font-size: 20px;
+  color: white;
+}
+#Books_details {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 20px;
+  font-size: 15px;
+  color: white;
+}
+#Books_button {
+  margin-left: 20px;
+}
